@@ -1,3 +1,9 @@
+commit 359df43a057eb1a54f4355ed289038fd09cfa2d6
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jul 16 15:08:18 2020 -0400
+
+    Renamed vars to consul_client to match role
+
 commit 358f61c95113ea23113429ac29db003e1d443bf6
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Jul 16 15:04:43 2020 -0400
