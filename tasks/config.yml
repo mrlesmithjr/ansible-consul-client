@@ -8,16 +8,16 @@
     state: directory
   become: true
   loop:
-    - "{{ consul_agent_config_dir }}"
-    - "{{ consul_agent_config_dir + '/client' }}"
-    - "{{ consul_agent_config_dir + '/scripts' }}"
+    - "{{ consul_client_config_dir }}"
+    - "{{ consul_client_config_dir + '/client' }}"
+    - "{{ consul_client_config_dir + '/scripts' }}"
 
 # We create the consul data folder
 - name: config | creating consul data folder
   file:
-    path: "{{ consul_agent_configuration.data_dir|default('/var/consul/data') }}"
-    owner: "{{ consul_agent_user_info.user }}"
-    group: "{{ consul_agent_user_info.group }}"
+    path: "{{ consul_client_configuration.data_dir|default('/var/consul/data') }}"
+    owner: "{{ consul_client_user_info.user }}"
+    group: "{{ consul_client_user_info.group }}"
     recurse: yes
     state: directory
   become: true
@@ -25,7 +25,7 @@
 - name: config | configuring consul
   template:
     src: etc/consul.d/client/config.json.j2
-    dest: "{{ consul_agent_config_dir + '/client/config.json' }}"
+    dest: "{{ consul_client_config_dir + '/client/config.json' }}"
     owner: root
     group: root
     mode: u=rw,g=r,o=r

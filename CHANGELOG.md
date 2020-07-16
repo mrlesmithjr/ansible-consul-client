@@ -1,3 +1,12 @@
+commit 358f61c95113ea23113429ac29db003e1d443bf6
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jul 16 15:04:43 2020 -0400
+
+    Changed role to ansible-consul-client
+    
+    This needs to be more clear that it is purely for
+    the client agent rather than server.
+
 commit 364983845bc47386b203aed97cf8622d1f903631
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Jul 16 13:42:47 2020 -0400

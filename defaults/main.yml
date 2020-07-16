@@ -2,14 +2,14 @@
 # defaults file for ansible-consul-client
 
 # Define interface to bind to...(eth0|eth1|enp0s8)
-consul_agent_bind_interface: enp0s8
+consul_client_bind_interface: enp0s8
 
-consul_agent_config_dir: /etc/consul.d
-consul_agent_config_file: /etc/consul.conf
+consul_client_config_dir: /etc/consul.d
+consul_client_config_file: /etc/consul.conf
 
 # https://www.consul.io/docs/agent/options.html
-consul_agent_configuration:
-  bind_addr: "{{ hostvars[inventory_hostname]['ansible_'+consul_agent_bind_interface]['ipv4']['address'] }}"
+consul_client_configuration:
+  bind_addr: "{{ hostvars[inventory_hostname]['ansible_'+consul_client_bind_interface]['ipv4']['address'] }}"
   client_addr: 127.0.0.1
   datacenter: dc1
   data_dir: /var/consul/data
@@ -26,14 +26,14 @@ consul_agent_configuration:
   server: false
   ui: true
 
-consul_agent_install_dir: /usr/local/bin
+consul_client_install_dir: /usr/local/bin
 
 # Define Consul user info to use for service
-consul_agent_user_info:
+consul_client_user_info:
   user: consul
   group: consul
 
-consul_agent_version: 1.7.2
+consul_client_version: 1.7.2
 
 # Consul Servers info
 # https://github.com/mrlesmithjr/ansible-consul

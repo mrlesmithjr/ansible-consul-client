@@ -4,11 +4,11 @@ Requires=network-online.target
 After=network-online.target
 
 [Service]
-User={{ consul_agent_user_info.user }}
-Group={{ consul_agent_user_info.group }}
+User={{ consul_client_user_info.user }}
+Group={{ consul_client_user_info.group }}
 Environment=GOMAXPROCS=2
 Restart=on-failure
-ExecStart={{ consul_agent_install_dir }}/consul agent $OPTIONS -config-dir={{ consul_agent_config_dir }}/client
+ExecStart={{ consul_client_install_dir }}/consul agent $OPTIONS -config-dir={{ consul_client_config_dir }}/client
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGINT
 

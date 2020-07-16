@@ -15,8 +15,8 @@ script
   # Make sure to use all our CPUs, because Consul can block a scheduler thread
   export GOMAXPROCS=`nproc`
 
-  exec {{ consul_agent_install_dir }}/consul agent \
-    -config-dir={{ consul_agent_config_dir }}/client \
+  exec {{ consul_client_install_dir }}/consul agent \
+    -config-dir={{ consul_client_config_dir }}/client \
     \$${CONSUL_FLAGS} \
     >>/var/log/consul-client.log 2>&1
 end script
