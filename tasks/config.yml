@@ -24,11 +24,11 @@
 
 - name: config | configuring consul
   template:
-    src: etc/consul.d/config.json.j2
-    dest: "{{ consul_agent_config_dir + '/config.json' }}"
+    src: etc/consul.d/client/config.json.j2
+    dest: "{{ consul_agent_config_dir + '/client/config.json' }}"
     owner: root
     group: root
     mode: u=rw,g=r,o=r
   become: true
   notify:
-    - restart consul
+    - restart consul-client

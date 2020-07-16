@@ -1,19 +1,16 @@
-# ansible-consul-agent
+# ansible-consul-client
 
 Ansible role to install/configure Hashicorp Consul agent
-
 
 ## Build Status
 
 ### GitHub Actions
 
-![Molecule Test](https://github.com/mrlesmithjr/ansible-consul-agent/workflows/Molecule%20Test/badge.svg)
+![Molecule Test](https://github.com/mrlesmithjr/ansible-consul-client/workflows/Molecule%20Test/badge.svg)
 
 ### Travis CI
 
-[![Build Status](https://travis-ci.org/mrlesmithjr/ansible-consul-agent.svg?branch=master)](https://travis-ci.org/mrlesmithjr/ansible-consul-agent)
-
-
+[![Build Status](https://travis-ci.org/mrlesmithjr/ansible-consul-client.svg?branch=master)](https://travis-ci.org/mrlesmithjr/ansible-consul-client)
 
 ## Requirements
 

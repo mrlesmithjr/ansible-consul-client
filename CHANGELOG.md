@@ -1,3 +1,9 @@
+commit 364983845bc47386b203aed97cf8622d1f903631
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jul 16 13:42:47 2020 -0400
+
+    Disabled Debian9/Ubuntu1604 testing
+
 commit 6676579d55f82ea8b7971b30fa2967467fbe14cf
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Jul 16 13:23:01 2020 -0400

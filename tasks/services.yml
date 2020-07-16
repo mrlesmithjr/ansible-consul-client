@@ -1,30 +1,30 @@
 ---
-- name: services | Configuring Consul Service (upstart)
+- name: services | Configuring Consul Client Service (upstart)
   template:
-    src: etc/init/consul.conf.j2
-    dest: /etc/init/consul.conf
+    src: etc/init/consul-client.conf.j2
+    dest: /etc/init/consul-client.conf
     owner: root
     group: root
     mode: u=rw,g=r,o=r
   become: true
-  notify: restart consul
+  notify: restart consul-client
   when: ansible_service_mgr == "upstart"
 
-- name: services | Configuring Consul Service (systemd)
+- name: services | Configuring Consul Client Service (systemd)
   template:
-    src: etc/systemd/system/consul.service.j2
-    dest: /etc/systemd/system/consul.service
+    src: etc/systemd/system/consul-client.service.j2
+    dest: /etc/systemd/system/consul-client.service
     owner: root
     group: root
     mode: u=rw,g=r,o=r
   become: true
   notify:
     - reload systemd
-    - restart consul
+    - restart consul-client
   when: ansible_service_mgr == "systemd"
 
-- name: services | Ensuring Consul Service is Enabled and Starts on Boot
+- name: services | Ensuring Consul Client Service is Enabled and Starts on Boot
   service:
-    name: consul
+    name: consul-client
     enabled: true
   become: true

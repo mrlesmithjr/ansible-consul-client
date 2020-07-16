@@ -4,6 +4,6 @@
   vars:
     consul_agent_bind_interface: "{{ ansible_default_ipv4['interface'] }}"
   tasks:
-    - name: Include ansible-consul-agent
+    - name: Include ansible-consul-client
       include_role:
-        name: ansible-consul-agent
+        name: ansible-consul-client

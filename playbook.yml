@@ -2,6 +2,6 @@
 - name: Example Playbook
   hosts: all
   tasks:
-    - name: Include ansible-consul-agent
+    - name: Include ansible-consul-client
       include_role:
-        name: ansible-consul-agent
+        name: ansible-consul-client

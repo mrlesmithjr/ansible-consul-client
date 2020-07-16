@@ -1,5 +1,5 @@
 ---
-# defaults file for ansible-consul-agent
+# defaults file for ansible-consul-client
 
 # Define interface to bind to...(eth0|eth1|enp0s8)
 consul_agent_bind_interface: enp0s8
