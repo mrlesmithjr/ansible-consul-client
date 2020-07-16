@@ -1,0 +1,18 @@
+---
+- name: debian | Update Apt Cache
+  apt:
+    update_cache: true
+  become: true
+
+- name: debian | Installing Pre-Reqs
+  apt:
+    name:
+      - dnsutils
+      - jq
+      - tree
+      - unzip
+      - uuid-runtime
+    state: present
+  become: true
+  register: result
+  until: result is successful

@@ -1,2 +1,13 @@
 ---
 # handlers file for ansible-consul-agent
+- name: reload systemd
+  systemd:
+    name: consul
+    daemon_reload: yes
+  become: true
+
+- name: restart consul
+  service:
+    name: consul
+    state: restarted
+  become: true

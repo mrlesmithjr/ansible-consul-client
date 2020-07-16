@@ -1,0 +1,34 @@
+---
+# We create the required consul configuration folders
+- name: config | creating consul configuration folders
+  file:
+    path: "{{ item }}"
+    owner: root
+    group: root
+    state: directory
+  become: true
+  loop:
+    - "{{ consul_agent_config_dir }}"
+    - "{{ consul_agent_config_dir + '/client' }}"
+    - "{{ consul_agent_config_dir + '/scripts' }}"
+
+# We create the consul data folder
+- name: config | creating consul data folder
+  file:
+    path: "{{ consul_agent_configuration.data_dir|default('/var/consul/data') }}"
+    owner: "{{ consul_agent_user_info.user }}"
+    group: "{{ consul_agent_user_info.group }}"
+    recurse: yes
+    state: directory
+  become: true
+
+- name: config | configuring consul
+  template:
+    src: etc/consul.d/config.json.j2
+    dest: "{{ consul_agent_config_dir + '/config.json' }}"
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  become: true
+  notify:
+    - restart consul

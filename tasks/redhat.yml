@@ -1,0 +1,31 @@
+---
+- name: redhat | Enabling EPEL Repo
+  yum:
+    name: epel-release
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when: ansible_distribution != "Fedora"
+
+- name: redhat | Installing Pre-Reqs
+  yum:
+    name:
+      - python-devel
+      - python-pip
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when: ansible_distribution != "Fedora"
+
+- name: redhat | Installing Additional Packages
+  package:
+    name:
+      - jq
+      - tree
+      - unzip
+    state: present
+  become: true
+  register: result
+  until: result is successful
