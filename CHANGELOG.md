@@ -1,3 +1,9 @@
+commit 9ffb6a16195ef6e37ab1714f395591d2181fa19e
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jul 16 13:13:23 2020 -0400
+
+    Fixed linting and updated platforms
+
 commit ad48b3a3f752d5031db1767649f8dfa50b7b386a
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Jul 16 12:52:15 2020 -0400
