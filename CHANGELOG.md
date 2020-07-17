@@ -1,3 +1,21 @@
+commit 9761ff37bed87623fdaed2c792fd4a79ebcbed94
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jul 16 22:46:20 2020 -0400
+
+    Fixed idempotence and disabled CentOS8
+
+commit b318db6abd66fc9a45269c87169ae9648859e9b0
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jul 16 22:36:46 2020 -0400
+
+    Updated with newest CI tests
+
+commit 676693217a43beb32d3ea58002bbac6a055caa9d
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jul 16 19:00:39 2020 -0400
+
+    Locked down Consul user account creation
+
 commit 359df43a057eb1a54f4355ed289038fd09cfa2d6
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Jul 16 15:08:18 2020 -0400
