@@ -1,7 +1,8 @@
 ---
 - name: install | Installing HashiCorp Consul
   unarchive:
-    src: "{{ 'https://releases.hashicorp.com/consul/'+consul_client_version|string+'/consul_'+consul_client_version|string+'_linux_amd64.zip' }}"
+    creates: "{{ consul_client_install_dir + '/consul' }}"
     dest: "{{ consul_client_install_dir+'/' }}"
     remote_src: true
+    src: "{{ 'https://releases.hashicorp.com/consul/'+consul_client_version|string+'/consul_'+consul_client_version|string+'_linux_amd64.zip' }}"
   become: true
