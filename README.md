@@ -1,7 +1,9 @@
 > [!CAUTION]
 > **This project is archived and no longer maintained.**
 > Archived: 2026-03-26
-> Reason: Use ansible-consul instead (consolidated role)# ansible-consul-client
+> Reason: Use ansible-consul instead (consolidated role)
+
+# ansible-consul-client
 
 Ansible role to install/configure Hashicorp Consul agent
 
